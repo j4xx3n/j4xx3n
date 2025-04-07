@@ -1,4 +1,4 @@
-🚀 Finding New Bug Bounty Programs: My Process 🕵️‍♂️
+# 🚀 Finding New Bug Bounty Programs: My Process 🕵️‍♂️
 
 Bug bounty hunting is all about staying ahead of the game. The faster you find new programs and their assets, the better your chances of discovering vulnerabilities before others. Here's my simple process for tracking new opportunities:
 

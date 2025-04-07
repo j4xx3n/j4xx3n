@@ -1,5 +1,5 @@
 ## 🔍 Writeups
-
+- [Finding New Bug Bounty Programs](Writeups/newPrograms.md)
 
 ## 📚 Tutorials
 - [How to Hunt for LFI Vulnerabilities](Tutorials/lfi.md)

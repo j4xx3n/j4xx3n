@@ -1,32 +1,51 @@
-# Finding Leaked Google Maps API Keys in Mass
+# Leaked and Unrestricted Google Maps API Key on `example.com`
 
-## Summary
-During my reconnaissance fase, I discovered several exposed Google Maps API keys by scanning a large list of subdomains for secrets in their HTTP response bodies. The process was entirely passive, and no interaction beyond simple GET requests was used to obtain this information.
+## Summary:
 
+A publicly accessable Google Maps API key was discovered in the response body of [example.com]. The key is not properly restricted and can be abused by an attacker to generate unauthorized Google Cloud Platform (GCP) charges by making billable API calls. 
 
-## Steps to reporoduce
-1. I used `ProjectDiscovery's Chaos` dataset to download a large set of public subdomains associated with bug bounty programs.
+## Affected Subdomains:
+`example.com`
+
+## Location of the Key:
+The key is present directly in the HTTP response body when visiting the subdomain.
+
+## Vulnerable API Services
+- example
+- example
+
+## Steps to Reproduce
+1. Leak verification:
 ```bash
-choas -dL domains.txt -o subs.txt
+curl -s example.com | grep -o "AIza[0-9A-Za-z_-]\{35\}"
 ```
-This yeided over 10,000 subdomains.
+This should print the exposed API key to the screen. It will look somthing like this: `AIzaSyD***********************nOpw`
 
-2. I ran `httpx-toolkit` with a custom regex filter pattern to search for Google Maps API keys in the HTTP responses of these subdomains.
+2. No restriction verification
 ```bash
-httpx -l subs.txt -mr 'AIza[0-9A-Za-z\-_]{35}'
+https://maps.googleapis.com/maps/api/geocode/json?latlng=40,30&key=AIzaSyD***********************nOpw
 ```
 
-3. To confirm whether the exposed keys were valid and determine their access levels, I used a tool `gmapsapiscanner`.
+## Proof of Concept (Abuse)
+The leaked key was tested and confirmed to have no restrictions against high-cost Google Maps services. The following request demonstrates that an attacker can make billable calls:
+
 ```bash
-python3 maps_api_scanner.py --api-key AIzaSyD***********************nOpw
+https://maps.googleapis.com/maps/api/geocode/json?latlng=40,30&key=AIzaSyD***********************nOpw
 ```
 
+## Impact:
+When Google Maps API keys are publicly exposed and not properly restricted, they can be exploited by attackers to make high-volume requests to premium APIs. This leads to:
 
-## Impact
-- Leaked Google Maps API keys can potentially be abused for:
+- Unintended billing on the company’s GCP account
+- Abuse of proprietary services
+- Potential exhaustion of quota, which could affect production applications relying on this key
 
-- Free quota exhaustion leading to billing abuse
 
-- Unauthorized access to Maps, Geocoding, or Places API
 
-- Leaking internal information via autocomplete or reverse geocoding
+# Security Best Practices Recommendation:
+
+Restrict Google Maps API keys in the Google Cloud Console by:
+
+- HTTP referrer restriction (for frontend web apps)
+- IP restriction (for backend services)
+- Limiting usage to specific APIs

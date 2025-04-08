@@ -1,6 +1,6 @@
 ## 🔍 Writeups
 - [Finding New Bug Bounty Programs](Writeups/newPrograms.md)
-- [Finding Leaked Google Maps API Keys in Mass](POCs/leakedGCPKeys.md)
+- [Finding Leaked Google Maps API Keys in Mass](Writeups/leakedGCPKeys.md)
 
 ## 📚 Tutorials
 - [How to Hunt for LFI Vulnerabilities](Tutorials/lfi.md)

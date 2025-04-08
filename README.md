@@ -8,3 +8,4 @@
 - [How to Hunt for SSRF Vulnerabilities](Tutorials/ssrf.md)
 
 ## 🚀 POCs
+- [Leaked and Unrestricted Google Maps API Key](POCs/leakedGCPKeys.md)

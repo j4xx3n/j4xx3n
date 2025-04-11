@@ -3,7 +3,6 @@
 1. Run the following commands to find signup pages and create a file to store usernames and passwords for each site.
 
 ```bash
-
 echo 'example.com' | subfinder -o subs.txt
 
 echo subs.txt | httpx-toolkit | katana -o urls.txt
@@ -27,7 +26,7 @@ b. Find the following mechanisums and any more and create a list or the urls.
 
 - GET /profile?user_id=12345
 
-Often gives away personal data or allows editing someone else's profile.
+  Often gives away personal data or allows editing someone else's profile.
 
 2. File Downloads or Uploads
 

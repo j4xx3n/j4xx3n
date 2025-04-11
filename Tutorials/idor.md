@@ -5,11 +5,11 @@
 ```bash
 echo 'example.com' | subfinder -o subs.txt
 
-echo subs.txt | httpx-toolkit | katana -o urls.txt
+cat subs.txt | httpx-toolkit | katana -o urls.txt
 
-echo urls.txt | grep -iE 'sign[-_]?up|register|create[-_]?account|join[-_]?now' | sort -u > signup.txt
+cat urls.txt | grep -iE 'sign[-_]?up|register|create[-_]?account|join[-_]?now' | sort -u > signup.txt
 
-echo signup.txt | while read url; do echo $url && echo 'UN:' && echo 'PW' > IDOR.txt; done
+cat signup.txt | while read url; do echo $url && echo 'UN:' && echo 'PW' > IDOR.txt; done
 
 nano IDOR.txt
 ```

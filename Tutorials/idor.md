@@ -9,7 +9,7 @@ cat subs.txt | httpx-toolkit | katana -o urls.txt
 
 cat urls.txt | grep -iE 'sign[-_]?up|register|create[-_]?account|join[-_]?now' | sort -u >> signup.txt
 
-cat subs.txt | while read url; do echo $url >> IDOR.txt && echo 'UN:' >> IDOR.txt && echo 'PW:' >> IDOR.txt; done
+cat signup.txt | while read url; do echo $url >> IDOR.txt && echo 'UN:' >> IDOR.txt && echo 'PW:' >> IDOR.txt; done
 
 nano IDOR.txt
 ```

@@ -7,6 +7,7 @@
 - [How to Hunt for Leaked GCP API Keys](Tutorials/gcp.md)
 - [How to Hunt for SSRF Vulnerabilities](Tutorials/ssrf.md)
 - [How to Hunt for IDORs](Tutorials/idor.md)
+- [How to Hunt for Subdomain Takeover](Tutorials/subzy.md)
 
 ## 🚀 POCs
 - [Leaked and Unrestricted Google Maps API Key](POCs/leakedGCPKeys.md)

@@ -7,5 +7,5 @@ curl 'https://web.archive.org/cdx/search/cdx?url=*.target.com/*&output=text&fl=o
 
 List of Domains
 ```bash
-cat domains.txt | while read url; do curl 'https://web.archive.org/cdx/search/cdx?url=*.$url/*&output=text&fl=original&collapse=urlkey' > wayback.txt; done
+cat domains.txt | while read url; do curl 'https://web.archive.org/cdx/search/cdx?url=*.$url/*&output=text&fl=original&collapse=urlkey' >> wayback.txt; done
 ```

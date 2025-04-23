@@ -1,3 +1,6 @@
+## ✅ Checklist
+- [Bug Bounty Checklist](checklist.html)
+
 ## 🔍 Writeups
 - [Finding New Bug Bounty Programs](Writeups/newPrograms.md)
 - [Finding Leaked Google Maps API Keys in Mass](Writeups/leakedGCPKeys.md)

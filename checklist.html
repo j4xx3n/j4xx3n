@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bug Bounty Checklist</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      background: #f0f0f5;
+      max-width: 700px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    label {
+      display: flex;
+      align-items: center;
+      margin: 0.5rem 0;
+      background: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    input[type="checkbox"] {
+      margin-right: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>🐞 Bug Bounty Checklist</h1>
+
+  <section id="recon">
+    <h2>Recon</h2>
+    <label><input type="checkbox" id="recon1"> Subdomain enumeration</label>
+    <label><input type="checkbox" id="recon2"> DNS zone transfer</label>
+    <label><input type="checkbox" id="recon3"> WHOIS lookup</label>
+    <label><input type="checkbox" id="recon4"> Web archive history</label>
+  </section>
+
+  <section id="enumeration">
+    <h2>Enumeration</h2>
+    <label><input type="checkbox" id="enum1"> Port scanning</label>
+    <label><input type="checkbox" id="enum2"> Directory brute-force</label>
+    <label><input type="checkbox" id="enum3"> Parameter discovery</label>
+    <label><input type="checkbox" id="enum4"> CMS identification</label>
+  </section>
+
+  <section id="vulns">
+    <h2>Vulnerabilities to Check</h2>
+    <label><input type="checkbox" id="vuln1"> XSS (Reflected, Stored, DOM)</label>
+    <label><input type="checkbox" id="vuln2"> SQLi (GET/POST, blind)</label>
+    <label><input type="checkbox" id="vuln3"> CSRF</label>
+    <label><input type="checkbox" id="vuln4"> IDOR</label>
+    <label><input type="checkbox" id="vuln5"> SSRF</label>
+    <label><input type="checkbox" id="vuln6"> Open redirect</label>
+    <label><input type="checkbox" id="vuln7"> CORS misconfigurations</label>
+    <label><input type="checkbox" id="vuln8"> Auth issues (brute force, 2FA bypass)</label>
+  </section>
+
+  <script>
+    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+      const id = checkbox.id;
+      checkbox.checked = localStorage.getItem(id) === 'true';
+      checkbox.addEventListener('change', () => {
+        localStorage.setItem(id, checkbox.checked);
+      });
+    });
+  </script>
+</body>
+</html>

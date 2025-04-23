@@ -30,6 +30,21 @@
     input[type="checkbox"] {
       margin-right: 1rem;
     }
+    #clear-btn {
+      display: block;
+      margin: 2rem auto;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      background: #d9534f;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    #clear-btn:hover {
+      background: #c9302c;
+    }
   </style>
 </head>
 <body>
@@ -63,12 +78,23 @@
     <label><input type="checkbox" id="vuln8"> Auth issues (brute force, 2FA bypass)</label>
   </section>
 
+  <button id="clear-btn">Clear All Checks</button>
+
   <script>
-    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+    checkboxes.forEach(checkbox => {
       const id = checkbox.id;
       checkbox.checked = localStorage.getItem(id) === 'true';
       checkbox.addEventListener('change', () => {
         localStorage.setItem(id, checkbox.checked);
+      });
+    });
+
+    document.getElementById('clear-btn').addEventListener('click', () => {
+      checkboxes.forEach(checkbox => {
+        checkbox.checked = false;
+        localStorage.setItem(checkbox.id, false);
       });
     });
   </script>

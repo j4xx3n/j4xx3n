@@ -18,6 +18,8 @@ cat resolved.txt | grep -Ei 'CNAME|NXDOMAIN|SERVFAIL' > suspicious.txt
 grep -Ei 'animaapp\.io|bitbucket\.io|trydiscourse\.com|hatenablog\.com|helpjuice\.com|helpscoutdocs\.com|helprace\.com|s\.strikinglydns\.com|na-west1\.surge\.sh|surveysparrow\.com|read\.uberflip\.com|wordpress\.com|worksites\.net'
 ```
 
+## Verify Results
+[Can I take over XYZ?](https://github.com/EdOverflow/can-i-take-over-xyz?tab=readme-ov-file)
 
 ## Resolvers List
 ```

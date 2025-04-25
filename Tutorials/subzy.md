@@ -20,9 +20,11 @@ grep -Ei 'animaapp\.io|bitbucket\.io|trydiscourse\.com|hatenablog\.com|helpjuice
 
 
 ## Resolvers List
+```
 129.250.35.251
 208.67.222.222
 208.67.220.222
 1.0.0.1
 8.8.4.4
 8.8.8.8 
+```

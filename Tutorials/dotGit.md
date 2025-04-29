@@ -16,6 +16,6 @@ echo example.com | subfinder -all | httpx-toolkit -path /.git/HEAD -silent -mr "
 ```
 
 Resources
-- (Web security - exposed .git folder in production)[https://medium.com/smallcase-engineering/web-security-exposed-git-folder-in-production-51ad9484dee0]
-- (Git Exposed - How to Identify and Exploit)[https://medium.com/stolabs/git-exposed-how-to-identify-and-exploit-62df3c165c37]
-- (Red Book - Exposed Git Repositories)[https://github.com/v4resk/red-book/blob/main/web/web-vulnerabilities/server-side/exposed-git-repositories.md]
+- [Web security - exposed .git folder in production](https://medium.com/smallcase-engineering/web-security-exposed-git-folder-in-production-51ad9484dee0)
+- [Git Exposed - How to Identify and Exploit](https://medium.com/stolabs/git-exposed-how-to-identify-and-exploit-62df3c165c37)
+- [Red Book - Exposed Git Repositories](https://github.com/v4resk/red-book/blob/main/web/web-vulnerabilities/server-side/exposed-git-repositories.md)

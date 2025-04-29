@@ -16,6 +16,7 @@
 - [How to Hunt for SSRF Vulnerabilities](Tutorials/ssrf.md)
 - [How to Hunt for IDORs](Tutorials/idor.md)
 - [How to Hunt for Subdomain Takeover](Tutorials/subzy.md)
+- [How to Hunt for Exposed .git Dorectories](Tutorials/dotGit.md)
 
 ## 🚀 POCs
 - [Leaked and Unrestricted Google Maps API Key](POCs/leakedGCPKeys.md)

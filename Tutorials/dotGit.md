@@ -16,3 +16,4 @@ echo example.com | subfinder -all | httpx-toolkit -path /.git/HEAD -silent -mr "
 ```
 
 Resources
+https://medium.com/smallcase-engineering/web-security-exposed-git-folder-in-production-51ad9484dee0

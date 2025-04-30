@@ -9,8 +9,10 @@
 
 ## 📚 Tutorials
 ### Recon
-- [How to Enumerate Web Archive History](Tutorials/webarchive.md)
+- [Find a Bug Bounty Program](Writeups/newPrograms.md)
+  
 ### Enumeration
+- [How to Enumerate Web Archive History](Tutorials/webarchive.md)
 
 ### Exploitation
 - [How to Hunt for LFI Vulnerabilities](Tutorials/lfi.md)

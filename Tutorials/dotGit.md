@@ -4,7 +4,7 @@
 ```bash
 echo example.com | subfinder -all -o subs.txt
 
-cat subs.txt | httpx-toolkit -path /.git/HEAD -silent -mr "refs/heads" -rl 500 | tee git.txt
+cat subs.txt | httpx-toolkit -path /.git/HEAD -silent -mr "refs/heads" -rl 500 | tee git.txt 
 
 cat git.txt | cut -d '/' -f1,2,3,4 | while read url; do git-dumper $url git-dumper/$url; done
 ```
@@ -18,6 +18,12 @@ Manual Dump
 ```bash
 wget --mirror -I .git https://example.com/.git/
 ```
+
+## Scanning the Repo for Secrets
+```bash
+
+```
+
 
 Resources
 - [Web security - exposed .git folder in production](https://medium.com/smallcase-engineering/web-security-exposed-git-folder-in-production-51ad9484dee0)

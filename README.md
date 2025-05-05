@@ -21,6 +21,7 @@
 - [How to Hunt for IDORs](Tutorials/idor.md)
 - [How to Hunt for Subdomain Takeover](Tutorials/subzy.md)
 - [How to Hunt for Exposed .git Dorectories](Tutorials/dotGit.md)
+- [How to Hunt for Open Redirect](Tutorials/openRedirect.md)
 
 ## 🚀 POCs
 - [Leaked and Unrestricted Google Maps API Key](POCs/leakedGCPKeys.md)

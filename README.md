@@ -18,7 +18,6 @@
 - [How to Hunt for LFI Vulnerabilities](Tutorials/lfi.md)
 - [How to Hunt for XSS Vulnerabilities](Tutorials/xss.md)
 - [How to Hunt for Leaked GCP API Keys](Tutorials/gcp.md)
-- [How to Hunt for SSRF Vulnerabilities](Tutorials/ssrf.md)
 - [How to Hunt for IDORs](Tutorials/idor.md)
 - [How to Hunt for Subdomain Takeover](Tutorials/subzy.md)
 - [How to Hunt for Exposed .git Dorectories](Tutorials/dotGit.md)

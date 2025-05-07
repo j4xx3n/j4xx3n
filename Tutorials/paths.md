@@ -1,4 +1,4 @@
-# How to Enumerate Endpoints
+# How to Enumerate Paths
 
 ## Crawling/Spidering the Site
 

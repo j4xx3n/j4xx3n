@@ -11,3 +11,6 @@ cat baseurls.txt | while read url; do arjun -u $url -m get; done
 Fuzzing Parameters with Custom Wordlist
 ```bash
 cat urls.txt | unfurl keys | anew customParams.txt
+
+cat subs.txt | while read $url; do python ParamHunter.py -u https://$url -w customParams.txt -a -j; done
+```

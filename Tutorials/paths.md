@@ -40,20 +40,3 @@ cewl urls.txt --with-numbers | anew customPaths.txt
 
 cat subs.txt | while read url; do ffuf -u $url/FUZZ -w customPaths.txt -mc 200 -recursion | anew ffuf.txt; done
 ```
-
-## Hidden Parameter Discovery
-
-Arjun
-```bash
-cat urls.txt | grep '?' | cut -d '?' -f 1 | sort -u > baseurls.txt
-
-cat baseurls.txt | while read url; do arjun -u $url -m post; done
-cat baseurls.txt | while read url; do arjun -u $url -m get; done
-```
-
-Fuzzing Parameters with Custom Wordlist
-```bash
-cat urls.txt | unfurl keys | anew customParams.txt
-
-cat subs.txt | while read url; do python ParamHunter.py -u https://$domain -w customParams.txt -a -j; done
-```

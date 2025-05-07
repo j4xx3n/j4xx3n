@@ -13,6 +13,7 @@
   
 ### Enumeration
 - [How to Enumerate Subdomains](Tutorials/subdomain.md)
+- [How to Enumerate Paths](Tutorials/paths.md)
 - [How to Enumerate Web Archive History](Tutorials/webarchive.md)
 
 ### Exploitation

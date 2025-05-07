@@ -16,13 +16,6 @@ findomain --quiet -t example.com | anew subs.txt
 cat domains.txt | while read domain; do findomain --quiet -t $domain | anew subs.txt
 ```
 
-Amass
-```bash
-amass enum -passive -d example.com | anew subs.txt
-
-cat domains.txt | while read domain; do amass enum -passive -d $domain | anew subs.txt
-```
-
 Assetfinder
 ```bash
 assetfinder -subs-only example.com | anew subs.txt

@@ -40,3 +40,10 @@ cewl urls.txt --with-numbers | anew customPaths.txt
 
 cat subs.txt | while read url; do ffuf -u $url/FUZZ -w customPaths.txt -mc 200 -recursion | anew ffuf.txt; done
 ```
+
+
+## Scanning JS Files
+
+```bash
+
+```

@@ -45,5 +45,7 @@ cat subs.txt | while read url; do ffuf -u $url/FUZZ -w customPaths.txt -mc 200 -
 ## Scanning JS Files
 
 ```bash
+cat urls.txt | grep '\.js$' | httpx-toolkit -mc 200 tee js.txt
 
+cat js.txt | jsleaks -s -l -k
 ```

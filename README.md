@@ -10,13 +10,15 @@
 ## 📚 Tutorials
 ### Recon
 - [Find a Bug Bounty Program](Writeups/newPrograms.md)
+- [How to Enumerate Web Archive History](Tutorials/webarchive.md)
   
 ### Enumeration
 - [How to Enumerate Subdomains](Tutorials/subdomain.md)
 - [How to Enumerate Paths](Tutorials/paths.md)
-- [How to Enumerate Web Archive History](Tutorials/webarchive.md)
+- [How to Hunt for Hidden Parameters](Tutorials/parameter.md)
 
 ### Exploitation
+- [How to Hunt with Vulnerabiliity Scanners](Tutorials/scanner.md)
 - [How to Hunt for LFI Vulnerabilities](Tutorials/lfi.md)
 - [How to Hunt for XSS Vulnerabilities](Tutorials/xss.md)
 - [How to Hunt for Leaked GCP API Keys](Tutorials/gcp.md)

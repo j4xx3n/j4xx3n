@@ -16,7 +16,7 @@ cat subs.txt | while read url; do curl 'https://web.archive.org/cdx/search/cdx?u
 
 Dirb
 ```bash
-cat subs.txt | while read sub; do dirb $sub | anew dirb.txt; done
+cat subs.txt | while read sub; do dirb https://$sub | anew dirb.txt; done
 
 grep -Eo 'https?://[^ ]+' dirb.txt | sed 's/^+ //' | anew urls.txt
 ```

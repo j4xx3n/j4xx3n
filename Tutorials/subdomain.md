@@ -49,7 +49,7 @@ cat domains.txt | while read domain; do ffuf -c -r -u 'https://$domain' -H 'Host
 
 Reverse DNS Lookup
 ```bash
-cat subs.txt | httpx-toolkit -ip | grep -oP '\[\K[^\]]+' | dnsx -ptr -resp-only | anew subs.txt; done
+cat subs.txt | httpx-toolkit -ip | grep -oP '\[\K[^\]]+' | dnsx -ptr -resp-only | anew subs.txt
 ```
 
 

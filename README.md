@@ -1,5 +1,3 @@
-![j4xx3n log](1000000987.png)
-
 ## ✅ Checklist
 - [Bug Bounty Checklist](checklist.html)
 

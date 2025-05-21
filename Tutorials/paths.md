@@ -4,12 +4,12 @@
 
 Katana
 ```bash
-katana -list subs.txt | anew urls.txt
+katana -list subs.txt | anew katana.txt
 ```
 
 Wayback Machine
 ```bash
-cat subs.txt | while read url; do curl 'https://web.archive.org/cdx/search/cdx?url=*.$url/*&output=text&fl=original&collapse=urlkey' | anew urls.txt; done
+cat subs.txt | waybackurls | anew waybackurls.txt; done
 ```
 
 ## Directory Brute Force
@@ -18,7 +18,7 @@ Dirb
 ```bash
 cat subs.txt | while read sub; do dirb https://$sub | anew dirb.txt; done
 
-grep -Eo 'https?://[^ ]+' dirb.txt | sed 's/^+ //' | anew urls.txt
+grep -Eo 'https?://[^ ]+' dirb.txt | sed 's/^+ //' | anew dirbUrls.txt
 ```
 
 Ffuf

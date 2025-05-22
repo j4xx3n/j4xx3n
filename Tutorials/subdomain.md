@@ -70,20 +70,7 @@ Probe Subdomains
 cat subs.txt | httpx-toolkit > liveSubs.txt
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Clean Directory
+```bash
+rm -rf subfinder.txt findomain.txt assetfinder.txt sublist3r.txt godork.txt gobuster.txt vhost.txt reverseDns.txt
+```

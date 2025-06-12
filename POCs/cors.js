@@ -1,5 +1,5 @@
 javascript:(() => {
-  fetch("https://community.oppo.com/ajax/msg/frontend/system/index/list?page=1&limit=10", {
+  fetch("https://cart.1688.com/cart.htm", {
     credentials: "include"
   })
   .then(res => res.text())

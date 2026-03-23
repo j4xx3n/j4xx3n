@@ -1,0 +1,55 @@
+baseURL = "https://j4xx3n.github.io/"
+languageCode = "en-us"
+title = "j4xx3n"
+theme = "PaperMod"
+paginate = 10
+
+[params]
+  author = "j4xx3n"
+  description = "My personal blog"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = true
+  ShowToc = true
+  defaultTheme = "auto"
+
+  [params.homeInfoParams]
+    Title = "Hey there"
+    Content = "Welcome to my blog. I write about things that interest me."
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/j4xx3n"
+
+[menu]
+  [[menu.main]]
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "archives"
+    name = "Archive"
+    url = "/archives/"
+    weight = 30
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false

@@ -1,0 +1,56 @@
+name: Build and Deploy Blog
+
+on:
+  push:
+    branches:
+      - source          # Push your Obsidian vault here to trigger a deploy
+  workflow_dispatch:    # Allow manual runs from GitHub Actions UI
+
+permissions:
+  contents: write       # Needed to push the built site to main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source branch
+        uses: actions/checkout@v4
+        with:
+          ref: source
+          fetch-depth: 0    # Full history needed for git-based post dates
+
+      - name: Set up Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "latest"
+          extended: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install PaperMod theme
+        run: |
+          git submodule update --init --recursive 2>/dev/null || true
+          # If PaperMod is not a submodule, clone it directly
+          if [ ! -d "themes/PaperMod" ]; then
+            git clone --depth=1 https://github.com/adityatelange/hugo-PaperMod themes/PaperMod
+          fi
+
+      - name: Convert Obsidian vault to Hugo content
+        run: python3 scripts/obsidian_to_hugo.py
+
+      - name: Build Hugo site
+        run: hugo --minify
+
+      - name: Deploy to main branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: main
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
+          commit_message: "Deploy: ${{ github.event.head_commit.message }}"

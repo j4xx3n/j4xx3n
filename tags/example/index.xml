@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Example on j4xx3n</title><link>https://j4xx3n.github.io/j4xx3n/tags/example/</link><description>Recent content in Example on j4xx3n</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 23 Mar 2026 13:48:01 +0000</lastBuildDate><atom:link href="https://j4xx3n.github.io/j4xx3n/tags/example/index.xml" rel="self" type="application/rss+xml"/><item><title>Example Tech Article</title><link>https://j4xx3n.github.io/j4xx3n/tech/example-article/</link><pubDate>Mon, 23 Mar 2026 13:48:01 +0000</pubDate><guid>https://j4xx3n.github.io/j4xx3n/tech/example-article/</guid><description>&lt;p&gt;This is an example tech article. Replace this file with your own notes.&lt;/p&gt;
+&lt;h2 id="how-this-works"&gt;How this works&lt;/h2&gt;
+&lt;p&gt;Your Obsidian vault folder structure maps directly to blog categories:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;vault/tech/&lt;/code&gt; → category: &lt;strong&gt;Tech&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;vault/personal/&lt;/code&gt; → category: &lt;strong&gt;Personal&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Each &lt;code&gt;.md&lt;/code&gt; file becomes an article&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="tips"&gt;Tips&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;You don&amp;rsquo;t need front matter — the script fills it in automatically&lt;/li&gt;
+&lt;li&gt;The article title defaults to the filename with dashes replaced by spaces&lt;/li&gt;
+&lt;li&gt;The date defaults to when you first committed the file to git&lt;/li&gt;
+&lt;li&gt;Add tags in front matter if you want them: &lt;code&gt;tags: [&amp;quot;tag1&amp;quot;, &amp;quot;tag2&amp;quot;]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

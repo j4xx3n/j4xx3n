@@ -25,9 +25,10 @@
 - This lab uses Tornato (Python) and places the expressions inside two currly brackets `{{name.firstname}}`. You can use the os python library to inject code into the template engine.
 - The following payload will inject code into the Tornato template engine:
 
-```python
+{{</* highlight python */>}}
 user.name}}{%25+import+os+%25}{{os.system('pwd')}}
-```
+{{</* /highlight */>}}
+
 - This will set the RCE payload as the prefered username and inject the code when a post is made via this user.
 
 ## [Server-side template injection using documentation](https://portswigger.net/web-security/server-side-template-injection/exploiting/lab-server-side-template-injection-using-documentation)

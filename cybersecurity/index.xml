@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Cybersecurity on j4xx3n</title><link>https://j4xx3n.github.io/j4xx3n/cybersecurity/</link><description>Recent content in Cybersecurity on j4xx3n</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 24 Mar 2026 13:39:01 +0000</lastBuildDate><atom:link href="https://j4xx3n.github.io/j4xx3n/cybersecurity/index.xml" rel="self" type="application/rss+xml"/><item><title>Welcome to the Cybersecurity Section</title><link>https://j4xx3n.github.io/j4xx3n/cybersecurity/welcome/</link><pubDate>Tue, 24 Mar 2026 13:39:01 +0000</pubDate><guid>https://j4xx3n.github.io/j4xx3n/cybersecurity/welcome/</guid><description>&lt;p&gt;This section covers topics in cybersecurity — from fundamentals to hands-on write-ups.&lt;/p&gt;
-&lt;h2 id="what-ill-cover-here"&gt;What I&amp;rsquo;ll cover here&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Cybersecurity on j4xx3n</title><link>https://j4xx3n.github.io/j4xx3n/cybersecurity/</link><description>Recent content in Cybersecurity on j4xx3n</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 23 Mar 2026 13:48:01 +0000</lastBuildDate><atom:link href="https://j4xx3n.github.io/j4xx3n/cybersecurity/index.xml" rel="self" type="application/rss+xml"/><item><title>What I'm Reading</title><link>https://j4xx3n.github.io/j4xx3n/cybersecurity/what-im-reading-1/</link><pubDate>Mon, 23 Mar 2026 13:48:01 +0000</pubDate><guid>https://j4xx3n.github.io/j4xx3n/cybersecurity/what-im-reading-1/</guid><description>&lt;p&gt;A running list of books I&amp;rsquo;ve read or am currently reading.&lt;/p&gt;
+&lt;h2 id="currently-reading"&gt;Currently reading&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;CTF write-ups and challenge breakdowns&lt;/li&gt;
-&lt;li&gt;Tool deep-dives and techniques&lt;/li&gt;
-&lt;li&gt;Notes from certs and courses&lt;/li&gt;
-&lt;li&gt;Security concepts explained&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;The Pragmatic Programmer&lt;/em&gt; — Hunt &amp;amp; Thomas&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;More articles coming soon.&lt;/p&gt;</description></item></channel></rss>
+&lt;h2 id="recently-finished"&gt;Recently finished&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;A Philosophy of Software Design&lt;/em&gt; — John Ousterhout&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="queue"&gt;Queue&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Thinking, Fast and Slow&lt;/em&gt; — Daniel Kahneman&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

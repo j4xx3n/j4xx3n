@@ -3,23 +3,31 @@ name: Build and Deploy Blog
 on:
   push:
     branches:
-      - source          # Your day-to-day branch: rename claude/* to this when ready
-      - claude/obsidian-blog-github-pages-llRxh   # Working branch during setup
-  workflow_dispatch:    # Allow manual runs from GitHub Actions UI
+      - source
+      - claude/obsidian-blog-github-pages-llRxh
+  workflow_dispatch:
 
 permissions:
-  contents: write       # Needed to push the built site to main
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Checkout source branch
+      - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref_name }}
-          fetch-depth: 0    # Full history needed for git-based post dates
+          fetch-depth: 0
           submodules: true
 
       - name: Set up Hugo
@@ -45,12 +53,14 @@ jobs:
       - name: Build Hugo site
         run: hugo --minify
 
-      - name: Deploy to main branch
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          publish_branch: main
-          user_name: "github-actions[bot]"
-          user_email: "github-actions[bot]@users.noreply.github.com"
-          commit_message: "Deploy: ${{ github.event.head_commit.message }}"
+          path: ./public
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
